@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentAI | Performance Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🎓 Student Performance Prediction
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#prediction">Prediction</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#history">History</a>
+        <a href="#about">About</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ● STUDENT PERFORMANCE ANALYTICS
+        </div>
+
+        <h1>
+            Predict.<br>
+            <span>Analyze.</span><br>
+            Improve.
+        </h1>
+
+        <p>
+            Analyze academic and lifestyle information
+            to estimate student performance and discover
+            areas for improvement.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#prediction" class="btn primary">
+                Start Prediction →
+            </a>
+
+            <a href="#dashboard" class="btn secondary">
+                View Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="card-top">
+            <span>Performance Score</span>
+            <span class="green">●</span>
+        </div>
+
+        <div class="big-score">
+            82%
+        </div>
+
+        <div class="performance-label">
+            GOOD PERFORMANCE
+        </div>
+
+        <div class="progress">
+            <div style="width:82%"></div>
+        </div>
+
+        <div class="mini-stats">
+
+            <div>
+                <small>Attendance</small>
+                <strong>91%</strong>
+            </div>
+
+            <div>
+                <small>Study Hours</small>
+                <strong>6.5h</strong>
+            </div>
+
+            <div>
+                <small>Assignments</small>
+                <strong>88%</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="section features">
+
+    <div class="section-title">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>
+            Simple data. Useful insights.
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-number">
+                01
+            </div>
+
+            <h3>
+                Enter Student Data
+            </h3>
+
+            <p>
+                Enter study hours, attendance,
+                previous marks and lifestyle
+                information.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-number">
+                02
+            </div>
+
+            <h3>
+                Analyze Data
+            </h3>
+
+            <p>
+                The system evaluates the student's
+                academic and lifestyle information.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-number">
+                03
+            </div>
+
+            <h3>
+                Get Prediction
+            </h3>
+
+            <p>
+                Receive an estimated performance
+                score and improvement suggestions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="section" id="dashboard">
+
+    <div class="section-title">
+
+        <span>DASHBOARD</span>
+
+        <h2>
+            Student Analytics
+        </h2>
+
+        <p>
+            Overview of student performance.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-cards">
+
+
+        <div class="dashboard-card">
+
+            <div class="icon">
+                👨‍🎓
+            </div>
+
+            <small>
+                Total Predictions
+            </small>
+
+            <strong id="studentCount">
+                0
+            </strong>
+
+            <p>
+                Students analyzed
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="icon">
+                📈
+            </div>
+
+            <small>
+                Average Score
+            </small>
+
+            <strong id="averageScore">
+                0%
+            </strong>
+
+            <p>
+                Average performance
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="icon">
+                🎯
+            </div>
+
+            <small>
+                Good / Excellent
+            </small>
+
+            <strong id="goodStudents">
+                0
+            </strong>
+
+            <p>
+                Students performing well
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card dark-card">
+
+            <div class="icon">
+                ⭐
+            </div>
+
+            <small>
+                Highest Score
+            </small>
+
+            <strong id="highestScore">
+                0%
+            </strong>
+
+            <p>
+                Best prediction
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-grid">
+
+        <div class="chart-card">
+
+            <h3>
+                Performance Distribution
+            </h3>
+
+
+            <div class="bar-item">
+
+                <div class="bar-label">
+                    <span>Excellent</span>
+                    <b id="excellentPercent">0%</b>
+                </div>
+
+                <div class="bar">
+                    <div id="excellentBar"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-item">
+
+                <div class="bar-label">
+                    <span>Good</span>
+                    <b id="goodPercent">0%</b>
+                </div>
+
+                <div class="bar">
+                    <div id="goodBar"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-item">
+
+                <div class="bar-label">
+                    <span>Average</span>
+                    <b id="averagePercent">0%</b>
+                </div>
+
+                <div class="bar">
+                    <div id="averageBar"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-item">
+
+                <div class="bar-label">
+                    <span>Poor</span>
+                    <b id="poorPercent">0%</b>
+                </div>
+
+                <div class="bar">
+                    <div id="poorBar"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="insight-card">
+
+            <span>
+                💡 INSIGHT
+            </span>
+
+            <h3>
+                Your data matters.
+            </h3>
+
+            <p>
+                Use the prediction system to understand
+                student strengths and identify areas
+                that need improvement.
+            </p>
+
+            <div class="insight-score">
+                80%+
+            </div>
+
+            <small>
+                Recommended attendance
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PREDICTION ================= -->
+
+<section class="section" id="prediction">
+
+    <div class="section-title">
+
+        <span>AI PREDICTION</span>
+
+        <h2>
+            Predict Performance
+        </h2>
+
+        <p>
+            Enter student information to generate
+            an estimated performance score.
+        </p>
+
+    </div>
+
+
+    <div class="prediction-layout">
+
+
+        <!-- FORM -->
+
+        <div class="form-card">
+
+            <form id="predictionForm">
+
+
+                <div class="form-section">
+
+                    <h3>
+                        Student Information
+                    </h3>
+
+                    <div class="input-group">
+
+                        <label>
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter student name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <h3>
+                        Academic Information
+                    </h3>
+
+
+                    <div class="input-grid">
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Study Hours / Day
+                            </label>
+
+                            <input
+                                type="number"
+                                id="studyHours"
+                                min="0"
+                                max="24"
+                                placeholder="Example: 6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Attendance (%)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="attendance"
+                                min="0"
+                                max="100"
+                                placeholder="Example: 85"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Previous Marks (%)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="previousMarks"
+                                min="0"
+                                max="100"
+                                placeholder="Example: 72"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Assignments (%)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="assignments"
+                                min="0"
+                                max="100"
+                                placeholder="Example: 90"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <h3>
+                        Lifestyle Information
+                    </h3>
+
+
+                    <div class="input-grid">
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Sleep Hours / Day
+                            </label>
+
+                            <input
+                                type="number"
+                                id="sleepHours"
+                                min="0"
+                                max="24"
+                                placeholder="Example: 7"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Screen Time / Day
+                            </label>
+
+                            <input
+                                type="number"
+                                id="screenTime"
+                                min="0"
+                                max="24"
+                                placeholder="Example: 3"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn primary predict-btn"
+                >
+                    🔮 Predict Performance
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="result-card">
+
+
+            <div id="emptyResult">
+
+                <div class="result-icon">
+                    🎯
+                </div>
+
+                <h2>
+                    Ready to Predict
+                </h2>
+
+                <p>
+                    Enter student information and
+                    click the prediction button.
+                </p>
+
+            </div>
+
+
+            <div
+                id="predictionResult"
+                class="hidden"
+            >
+
+                <span class="result-label">
+                    PREDICTED SCORE
+                </span>
+
+
+                <div
+                    class="result-score"
+                    id="resultScore"
+                >
+                    0%
+                </div>
+
+
+                <div
+                    class="result-status"
+                    id="resultStatus"
+                >
+                    GOOD
+                </div>
+
+
+                <div class="result-progress">
+
+                    <div
+                        id="resultProgress"
+                    ></div>
+
+                </div>
+
+
+                <p
+                    class="result-message"
+                    id="resultMessage"
+                ></p>
+
+
+                <div
+                    class="recommendation"
+                    id="recommendation"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ANALYSIS ================= -->
+
+<section class="section" id="analysis">
+
+    <div class="section-title">
+
+        <span>ANALYSIS</span>
+
+        <h2>
+            Performance Analysis
+        </h2>
+
+        <p>
+            Understand the factors affecting
+            student performance.
+        </p>
+
+    </div>
+
+
+    <div class="analysis-card">
+
+        <div class="analysis-top">
+
+            <div>
+
+                <small>
+                    PERFORMANCE FACTORS
+                </small>
+
+                <h3>
+                    Impact Overview
+                </h3>
+
+            </div>
+
+
+            <div
+                class="analysis-score"
+                id="analysisScore"
+            >
+                0%
+            </div>
+
+        </div>
+
+
+        <div class="factor">
+
+            <div class="factor-info">
+
+                <span>
+                    📚 Study Hours
+                </span>
+
+                <strong id="studyFactor">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="factor-bar">
+
+                <div
+                    id="studyFactorBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="factor">
+
+            <div class="factor-info">
+
+                <span>
+                    🏫 Attendance
+                </span>
+
+                <strong id="attendanceFactor">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="factor-bar">
+
+                <div
+                    id="attendanceFactorBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="factor">
+
+            <div class="factor-info">
+
+                <span>
+                    📝 Previous Marks
+                </span>
+
+                <strong id="marksFactor">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="factor-bar">
+
+                <div
+                    id="marksFactorBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="factor">
+
+            <div class="factor-info">
+
+                <span>
+                    📖 Assignments
+                </span>
+
+                <strong id="assignmentFactor">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="factor-bar">
+
+                <div
+                    id="assignmentFactorBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="factor">
+
+            <div class="factor-info">
+
+                <span>
+                    😴 Sleep
+                </span>
+
+                <strong id="sleepFactor">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="factor-bar">
+
+                <div
+                    id="sleepFactorBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="analysis-grid">
+
+
+        <div class="analysis-box">
+
+            <span>
+                STRENGTHS
+            </span>
+
+            <h3>
+                What's going well?
+            </h3>
+
+            <ul id="strengthList">
+
+                <li>
+                    Make a prediction to see strengths.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="analysis-box dark-box">
+
+            <span>
+                IMPROVEMENT
+            </span>
+
+            <h3>
+                What can improve?
+            </h3>
+
+            <ul id="improvementList">
+
+                <li>
+                    Make a prediction to see improvements.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= HISTORY ================= -->
+
+<section class="section" id="history">
+
+    <div class="history-top">
+
+        <div class="section-title">
+
+            <span>
+                PREDICTION HISTORY
+            </span>
+
+            <h2>
+                Previous Predictions
+            </h2>
+
+        </div>
+
+
+        <button
+            class="btn secondary"
+            onclick="clearHistory()"
+        >
+            Clear History
+        </button>
+
+    </div>
+
+
+    <div class="table-card">
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Student
+                        </th>
+
+                        <th>
+                            Score
+                        </th>
+
+                        <th>
+                            Performance
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="historyTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div
+            id="noHistory"
+            class="no-history"
+        >
+
+            <div>
+                📭
+            </div>
+
+            <h3>
+                No predictions yet
+            </h3>
+
+            <p>
+                Make your first prediction to see
+                it here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+    <div class="about-hero">
+
+        <span>
+            ABOUT THE PROJECT
+        </span>
+
+        <h2>
+            Understanding students
+            through <span>data.</span>
+        </h2>
+
+        <p>
+            StudentAI is a student performance prediction
+            and analytics project designed to demonstrate
+            how academic and lifestyle information can
+            be used to estimate student performance.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+        <div class="about-card">
+
+            <span>01</span>
+
+            <h3>
+                Project Objective
+            </h3>
+
+            <p>
+                Analyze student information and generate
+                an estimated performance score.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <span>02</span>
+
+            <h3>
+                Input Factors
+            </h3>
+
+            <p>
+                Study hours, attendance, previous marks,
+                assignments, sleep and screen time.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <span>03</span>
+
+            <h3>
+                Technology
+            </h3>
+
+            <p>
+                HTML, CSS and JavaScript are used to
+                create the application.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <span>04</span>
+
+            <h3>
+                Important Note
+            </h3>
+
+            <p>
+                Predictions are estimates for educational
+                demonstration purposes.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="technologies">
+
+        <strong>
+            TECHNOLOGIES USED
+        </strong>
+
+        <div class="tech-list">
+
+            <div>HTML5</div>
+            <div>CSS3</div>
+            <div>JavaScript</div>
+            <div>LocalStorage</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🎓 Student Performance Prediction.
+    </div>
+
+    <p>
+        Student Performance Prediction System
+    </p>
+
+    <p>
+        © 2026 Shrutika Kale
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
